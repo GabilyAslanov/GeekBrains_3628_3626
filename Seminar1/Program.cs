@@ -68,3 +68,23 @@ int num=int.Parse(Console.ReadLine());
 int y=num%10;
 
 Console.WriteLine($"{y}");
+
+// Напишите программу, которая будет
+// выдавать название дня недели по заданному номеру.
+// 3 -> Среда
+// 5 -> Пятница
+
+Console.WriteLine("Enter day number : ");
+string enterDay = Console.ReadLine();
+int day = Convert.ToInt32(enterDay);
+string WeekDay = "Monday";
+
+if (day == 1 ) WeekDay = "Monday";
+else if (day == 2 ) WeekDay = "Tuesday";
+else if (day == 3 ) WeekDay = "Wednesday";
+else if (day == 4 ) WeekDay = "Thursday";
+else if (day == 5 ) WeekDay = "Friday";
+else if (day == 6 ) WeekDay = "Saturday";
+else if (day == 7 ) WeekDay = "Sunday";
+
+Console.WriteLine(WeekDay);
