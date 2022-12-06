@@ -56,6 +56,7 @@ else
 // 78 -> третьей цифры нет
 
 // 32679 -> 6
+
 Console.WriteLine("Enter number : ");
 num = Convert.ToInt32(Console.ReadLine());
 
@@ -63,51 +64,76 @@ Console.WriteLine("Enter index : ");
 int index = Convert.ToInt32(Console.ReadLine());
 
 double pow = Math.Pow(10, index);
-Console.Clear();
 
-if (num < pow)
+
+
+if (num < 1000)
 {
-    Console.WriteLine($"Третьей цифры нет");
-    return;
+    Console.WriteLine($"Цифра меньше индекса");
+  
 }
+else   {
 
 int tmp = num;
 
-while (tmp > pow)
+while (tmp > 1000)
 {
     tmp /= 10;
 }
+
 int result = tmp % 10;
+
 Console.WriteLine($"Цифра под индексом {index} числа {num} -> {result}");
+}
 
 
 //Задача 15: Дано число обозначающее день недели. Выяснить является номер дня недели выходным
 Console.WriteLine("Enter dayWeek : ");
-int dayWeek = Convert.ToInt32(Console.ReadLine());
+string dayWeek = Console.ReadLine();
+
 switch (dayWeek)
 {
-    case 1:
+    case "1":
         Console.WriteLine("Понедельник- НЕТ");
         break;
-    case 2:
+    case "2":
         Console.WriteLine("Вторник- НЕТ");
         break;
-    case 3:
+    case "3":
         Console.WriteLine("Среда- НЕТ");
         break;
-    case 4:
+    case "4":
         Console.WriteLine("Четверг- НЕТ");
         break;
-    case 5:
+    case "5":
         Console.WriteLine("Пятница- Да");
         break;
-    case 6:
+    case "6":
         Console.WriteLine("Суббота- Нет");
         break;
-    case 7:
+    case "7":
         Console.WriteLine("Воскресенье- Нет");
         break;
-    default:
-        Console.WriteLine("Некорректный номер дня недели");
+    case "8":
+        Console.WriteLine("Воскресенье- Нет");
         break;
+          case "954595aeeg":
+        Console.WriteLine("Воскресенье- Нет");
+        break;
+}
+
+if(dayWeek=="1"){
+ Console.WriteLine("Понедельник- НЕТ");
+}
+else if(dayWeek=="2")
+{
+   Console.WriteLine("Вторник- НЕТ");  
+}
+else if(dayWeek=="3")
+{
+   Console.WriteLine("Среда- НЕТ"); 
+}
+else 
+{
+     Console.WriteLine("Некорректный номер дня недели");
 }
