@@ -20,9 +20,9 @@ else
 
 
 Console.Write("Введите первое чило: ");
-int number1 = int.Parse(Console.ReadLine());
+ number1 = int.Parse(Console.ReadLine());
 Console.Write("Введите второе число: ");
-int number2 = int.Parse(Console.ReadLine());
+ number2 = int.Parse(Console.ReadLine());
 Console.Write("Введите третье число: ");
 int number3 = int.Parse(Console.ReadLine());
 
