@@ -19,15 +19,17 @@ int GetSum(int limit)
 Console.Clear();
 Console.Write("Введите число: ");
 int A = int.Parse(Console.ReadLine());
-Write("Введите степень: ");
+Console.Write("Введите степень: ");
 int B = int.Parse(Console.ReadLine());
 
-Console.WriteLine($"{A} в степени {B} = {Pow(A,B)}");
+Console.WriteLine($"{A} в степени {B} = {Pow(A, B)}");
 
 
 int Pow(int num, int rank)
 {
-    if(B==0) return 1;
+    if (rank == 0) return 1;
+    else if (rank == 1) return num;
+    else if (num == 0 || num == 1) return num;
 
     int result = num;
     for (int i = 2; i <= rank; i++)
@@ -49,10 +51,10 @@ Console.WriteLine($"Суммф цифр = {GetSumNums(num)}");
 int GetSumNums(int number)
 {
     int sum = 0;
-    while(number>0)
+    while (number > 0)
     {
-        sum+=number%10;
-        number/=10;
+        sum += number % 10;
+        number /= 10;
     }
     return sum;
 }
@@ -61,16 +63,16 @@ int GetSumNums(int number)
 //Напишите программу, которая задаёт массив 
 //из 8 элементов и выводит их на экран.
 Console.Clear();
-int[] array = GetRandomArray(8,0,100);
+int[] array = GetRandomArray(8, 0, 100);
 Console.WriteLine($"[{String.Join(",", array)}]");
 
 
-int[] GetRandomArray(int size,int minValue,int maxValue)
+int[] GetRandomArray(int size, int minValue, int maxValue)
 {
     int[] result = new int[size];
     for (int i = 0; i < size; i++)
     {
-        result[i] = new Random().Next(minValue,maxValue);
+        result[i] = new Random().Next(minValue, maxValue+1);
     }
 
     return result;
